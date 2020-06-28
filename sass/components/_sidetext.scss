@@ -1,0 +1,72 @@
+.section-main {
+    background-image: url(../assets/main-image-2.jpeg);
+    background-size: cover;
+    background-position: 50% 0;
+    height: $container-height;
+}
+
+.section-main-1 {
+    background-image: url(../assets/main-image-3.jpeg);
+    background-size: cover;
+    background-position: 50% 0;
+    height: $container-height;
+}
+
+.main-image {
+    padding-left: 45%;
+    padding-top: 10rem;
+
+    &__text {
+        text-transform: $upper;
+        font-size: 2.5rem;
+        font-family: roboto;
+        margin: 0;
+        letter-spacing: 0.2rem;
+    }
+
+    &__freeshipping {
+        font-weight: lighter;
+        opacity: 0.7;
+        font-style: cardo;
+        font-style: italic;
+        margin: 3rem 0;
+    }
+
+    &__amount {
+        font-size: 3rem;
+        color: orange;
+        font-family: roboto;
+    }
+}
+.main-image-1 {
+    padding-right: 45%;
+    padding-top: 10rem;
+}
+
+.section-last {
+    background-image: url(../assets/main-image-4.jpeg);
+    background-size: cover;
+    background-position: 50% 0;
+    height: 75rem;
+}
+
+.redcoat {
+    width: 50%;
+    text-align: center;
+    padding-top: 20rem;
+    padding-left: 20rem;
+
+    @include respond(phone) {
+        padding-left: 0;
+    }
+
+    &__text {
+        text-transform: $upper;
+        font-family: roboto;
+        letter-spacing: 0.4rem;
+    }
+
+    &__para {
+        opacity: 0.5;
+    }
+}

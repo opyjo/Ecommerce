@@ -1,0 +1,175 @@
+.crumbs {
+    @include centerDiv;
+    margin-bottom: 10rem;
+
+    &__item {
+        text-transform: $upper;
+        margin: 1rem 2rem;
+        font-style: roboto;
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: black;
+
+        @include respond(phone) {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            color: orange;
+        }
+
+        &:hover::after {
+            color: orange;
+            opacity: 1;
+        }
+
+        &::after {
+            content: "\25C6";
+            position: relative;
+            left: -50%;
+            bottom: -3rem;
+            opacity: 0;
+        }
+    }
+}
+
+.merch {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, 300px);
+    align-content: space-between;
+
+    @include respond(phone) {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, 300px);
+        align-content: space-between;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__figure {
+        margin-right: 0;
+        position: relative;
+
+        &:hover .merch__cart {
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        text-transform: $upper;
+        font-size: 1rem;
+        font-weight: lighter;
+        font-family: roboto;
+        font-weight: 400;
+
+        &:hover {
+            color: orange;
+        }
+    }
+
+    &__span {
+        margin-left: 1rem;
+        text-decoration-line: line-through;
+        font-weight: 400;
+    }
+
+    &__icon {
+        text-transform: uppercase;
+        border: 1px solid black;
+        padding: 0.5rem;
+        position: absolute;
+        top: 0;
+        left: 0.5rem;
+        font-family: roboto;
+        font-weight: 700;
+    }
+
+    &__cart {
+        display: flex;
+        width: calc(100% - 1.2rem);
+        justify-content: center;
+        align-content: center;
+        text-transform: $upper;
+        transform: translateY(-8rem);
+        background-color: rgba(255, 166, 0, 0.562);
+        font-family: roboto;
+        opacity: 0;
+    }
+}
+
+.plain {
+    display: flex;
+    margin-top: 5rem;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+    }
+}
+
+.section-arrival {
+    @include centerDiv;
+    margin-bottom: 4rem;
+}
+
+.comment {
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: roboto;
+    opacity: 0.5;
+
+    &__para {
+        font-style: italic;
+        margin-bottom: 3rem;
+    }
+
+    &__item1 {
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 1.3rem;
+    }
+
+    &__item2 {
+        text-transform: uppercase;
+        opacity: 0.5;
+        margin-top: 0;
+        font-size: 1rem;
+    }
+
+    &__dot {
+        height: 1.2rem;
+        width: 1.2rem;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0.3rem;
+
+        &:hover {
+            background-color: orange;
+        }
+    }
+}
+
+.partner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @include respond(phone) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 5rem;
+        justify-content: center;
+    }
+}
