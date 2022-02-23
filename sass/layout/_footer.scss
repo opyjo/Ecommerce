@@ -1,0 +1,131 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 30rem;
+
+    @include respond(phone) {
+        height: 100%;
+    }
+
+    @include respond(tab-land) {
+        height: 100%;
+    }
+}
+
+.socialmedia {
+    display: flex;
+    font-size: 9px;
+    font-family: roboto;
+    justify-content: space-between;
+    color: white;
+
+    @include respond(tab-land) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, 300px);
+        align-content: space-between;
+    }
+
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__col-1 {
+        flex-basis: 300px;
+        padding-right: 4rem;
+
+        @include respond(phone) {
+            flex-basis: 0;
+        }
+    }
+
+    &__col-2 {
+        flex-basis: 200px;
+        padding-left: 1rem;
+
+        @include respond(phone) {
+            flex-basis: 0;
+        }
+    }
+
+    &__col-3 {
+        flex-basis: 250px;
+        padding-right: 3rem;
+
+        @include respond(phone) {
+            flex-basis: 0;
+        }
+    }
+
+    &__col-4 {
+        flex-basis: 250px;
+
+        @include respond(phone) {
+            flex-basis: 0;
+        }
+    }
+
+    &__header {
+        font-size: 1rem;
+        text-transform: $upper;
+        margin-top: 4rem;
+    }
+
+    &__para {
+        opacity: $default-opacity;
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        padding-left: 0;
+
+        &--1 {
+            padding-left: 2rem;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        margin: 2rem;
+        text-transform: $upper;
+        opacity: $default-opacity;
+
+        &:hover {
+            color: orange;
+            opacity: 0.8;
+        }
+    }
+
+    &__period {
+        letter-spacing: 0.2rem;
+        opacity: $default-opacity;
+    }
+
+    &__tweet {
+        opacity: $default-opacity;
+    }
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.reference {
+    display: flex;
+    justify-content: space-between;
+
+    &__header {
+        font-size: 1rem;
+        color: white;
+        opacity: $default-opacity;
+        padding-top: 1.5rem;
+    }
+
+    &__icon {
+        color: white;
+        opacity: $default-opacity;
+        margin: 1rem;
+    }
+}

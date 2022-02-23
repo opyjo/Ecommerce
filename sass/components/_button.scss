@@ -1,0 +1,60 @@
+.btn {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        border: $hover;
+        color: orange;
+    }
+
+    &__container {
+        @include centerDiv;
+        margin-bottom: 4rem;
+    }
+
+    &:focus-within {
+        border: 1px solid orange;
+        color: orange;
+    }
+
+    &--middle {
+        color: black;
+        border: 1px solid rgba(128, 128, 128, 0.13);
+        font-family: roboto;
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+
+    &--mainimage {
+        color: black;
+        padding: 1.5rem 5rem;
+        background-color: orange;
+        letter-spacing: 0.2rem;
+
+        &:hover {
+            opacity: 0.7;
+            color: black;
+        }
+    }
+
+    &--readmore {
+        color: black;
+        margin-top: 4rem;
+        border: 1px solid gray;
+        font-size: 1.2rem;
+        font-family: roboto;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        opacity: 0.5;
+    }
+
+    &--redcoat {
+        background-color: black;
+        font-family: roboto;
+        margin-top: 3rem;
+    }
+}

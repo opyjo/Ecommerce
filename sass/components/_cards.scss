@@ -1,0 +1,62 @@
+.card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  &__fig {
+    position: relative;
+    margin: 1rem;
+
+    &:hover .card__anchor {
+      color: orange;
+    }
+
+    &:hover .figcaption__para {
+      color: orange;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: $white;
+    width: 65%;
+    text-align: center;
+    border: $default-border;
+    padding: 0.5rem 0;
+
+    &--2 {
+      border: none;
+    }
+  }
+
+  .figcaption__para {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__anchor {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+}
